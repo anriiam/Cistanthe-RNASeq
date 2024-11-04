@@ -1,0 +1,1472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+<td bgcolor="#00FFFF" id="best_site"><a href="best_site.narrowPeak""><b>Best Site per Sequence</b></a></td>
+<script>
+var new_icon_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAMAAAAyEe/dAAAACVBMVEX//wAAAAD////s2cV/AAAAdUlEQVQYlXVRBxLAIAhL+P+jC2HZhXcBZEWEldDsZcLIcAhHWWnK8SDcWQhMFUHdAQ1CqQ5+CWPmlHojl+nCJNRtzu4qRc3IUzmTVpXYK0nox0z0PI1stgchdK7lEv7ekhvalw8WW547Gyzedt/2/gLx8WXjXF/1AYFriNAWAAAAAElFTkSuQmCC";
+var new_icon = document.createElement("img");
+new_icon.src = new_icon_src;
+new_icon.alt = "NEW";
+const elem = document.getElementById("best_site");
+elem.appendChild(document.createTextNode("  "));
+elem.appendChild(new_icon);
+</script>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.7, (Release date: Wed Jun 19 13:59:04 2024 -0700)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE p_drought_all_cpNADP-ME4-1_cluster.fa
+  <br />
+  Database contains 442 sequences, 884000 residues
+</p>
+<p>
+  MOTIFS streme_out/streme.xml (DNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">1-ATATAAGTA</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">ATATAAGTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">2-AAACCAAACATCA</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAACCAAACATCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">3-ATATCTCATATG</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">ATATCTCATATG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">4-AGTACGTCTGGC</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">AGTACGTCTGGC</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (./background):
+<br/>
+
+A 0.315 C 0.185 G 0.185 T 0.315 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 115 motif occurences with a p-value less than 0.0001.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">10211027</td>
+      <td style="text-align:left;">10211038</td>
+      <td style="text-align:left;">2.29e-08</td>
+      <td style="text-align:left;">0.0403</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">642618</td>
+      <td style="text-align:left;">642629</td>
+      <td style="text-align:left;">6.2e-08</td>
+      <td style="text-align:left;">0.0545</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">41339810</td>
+      <td style="text-align:left;">41339821</td>
+      <td style="text-align:left;">1.14e-07</td>
+      <td style="text-align:left;">0.0671</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">3741764</td>
+      <td style="text-align:left;">3741775</td>
+      <td style="text-align:left;">5.8e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">1367296</td>
+      <td style="text-align:left;">1367307</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">30083176</td>
+      <td style="text-align:left;">30083187</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">35767284</td>
+      <td style="text-align:left;">35767295</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">35767284</td>
+      <td style="text-align:left;">35767295</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">35767284</td>
+      <td style="text-align:left;">35767295</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">43294050</td>
+      <td style="text-align:left;">43294061</td>
+      <td style="text-align:left;">1.08e-06</td>
+      <td style="text-align:left;">0.158</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">43294050</td>
+      <td style="text-align:left;">43294061</td>
+      <td style="text-align:left;">1.08e-06</td>
+      <td style="text-align:left;">0.158</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">43294050</td>
+      <td style="text-align:left;">43294061</td>
+      <td style="text-align:left;">1.08e-06</td>
+      <td style="text-align:left;">0.158</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">35771481</td>
+      <td style="text-align:left;">35771492</td>
+      <td style="text-align:left;">1.41e-06</td>
+      <td style="text-align:left;">0.166</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTCTGTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">35771481</td>
+      <td style="text-align:left;">35771492</td>
+      <td style="text-align:left;">1.41e-06</td>
+      <td style="text-align:left;">0.166</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTCTGTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">35771481</td>
+      <td style="text-align:left;">35771492</td>
+      <td style="text-align:left;">1.41e-06</td>
+      <td style="text-align:left;">0.166</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTCTGTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">54181431</td>
+      <td style="text-align:left;">54181442</td>
+      <td style="text-align:left;">1.61e-06</td>
+      <td style="text-align:left;">0.177</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGTGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">13351029</td>
+      <td style="text-align:left;">13351040</td>
+      <td style="text-align:left;">2.03e-06</td>
+      <td style="text-align:left;">0.21</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">33992911</td>
+      <td style="text-align:left;">33992922</td>
+      <td style="text-align:left;">2.25e-06</td>
+      <td style="text-align:left;">0.22</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTTTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">34544878</td>
+      <td style="text-align:left;">34544889</td>
+      <td style="text-align:left;">2.59e-06</td>
+      <td style="text-align:left;">0.239</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTTGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">5173238</td>
+      <td style="text-align:left;">5173249</td>
+      <td style="text-align:left;">2.76e-06</td>
+      <td style="text-align:left;">0.243</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGGGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">640531</td>
+      <td style="text-align:left;">640542</td>
+      <td style="text-align:left;">2.95e-06</td>
+      <td style="text-align:left;">0.247</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGTATGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">23654827</td>
+      <td style="text-align:left;">23654838</td>
+      <td style="text-align:left;">3.23e-06</td>
+      <td style="text-align:left;">0.258</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGTCGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">41878259</td>
+      <td style="text-align:left;">41878270</td>
+      <td style="text-align:left;">3.84e-06</td>
+      <td style="text-align:left;">0.294</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGGCTGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42845125</td>
+      <td style="text-align:left;">42845136</td>
+      <td style="text-align:left;">4.93e-06</td>
+      <td style="text-align:left;">0.361</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACTTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3037272</td>
+      <td style="text-align:left;">3037283</td>
+      <td style="text-align:left;">6.1e-06</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3037272</td>
+      <td style="text-align:left;">3037283</td>
+      <td style="text-align:left;">6.1e-06</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">28838377</td>
+      <td style="text-align:left;">28838388</td>
+      <td style="text-align:left;">6.23e-06</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42238128</td>
+      <td style="text-align:left;">42238139</td>
+      <td style="text-align:left;">6.43e-06</td>
+      <td style="text-align:left;">0.404</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGGCGGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">35894227</td>
+      <td style="text-align:left;">35894238</td>
+      <td style="text-align:left;">7.97e-06</td>
+      <td style="text-align:left;">0.483</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGTTTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">54187756</td>
+      <td style="text-align:left;">54187767</td>
+      <td style="text-align:left;">8.63e-06</td>
+      <td style="text-align:left;">0.506</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACTACTTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">34006219</td>
+      <td style="text-align:left;">34006230</td>
+      <td style="text-align:left;">9.61e-06</td>
+      <td style="text-align:left;">0.545</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">55049385</td>
+      <td style="text-align:left;">55049396</td>
+      <td style="text-align:left;">1.05e-05</td>
+      <td style="text-align:left;">0.558</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTTAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">55049385</td>
+      <td style="text-align:left;">55049396</td>
+      <td style="text-align:left;">1.05e-05</td>
+      <td style="text-align:left;">0.558</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTTAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">545872</td>
+      <td style="text-align:left;">545883</td>
+      <td style="text-align:left;">1.29e-05</td>
+      <td style="text-align:left;">0.669</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAATGTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">29049159</td>
+      <td style="text-align:left;">29049170</td>
+      <td style="text-align:left;">1.4e-05</td>
+      <td style="text-align:left;">0.706</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGTAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">7083775</td>
+      <td style="text-align:left;">7083786</td>
+      <td style="text-align:left;">1.46e-05</td>
+      <td style="text-align:left;">0.715</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">33781697</td>
+      <td style="text-align:left;">33781708</td>
+      <td style="text-align:left;">1.63e-05</td>
+      <td style="text-align:left;">0.773</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACGTGTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold4</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">16747051</td>
+      <td style="text-align:left;">16747062</td>
+      <td style="text-align:left;">1.78e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4273678</td>
+      <td style="text-align:left;">4273689</td>
+      <td style="text-align:left;">1.86e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGGCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3355786</td>
+      <td style="text-align:left;">3355797</td>
+      <td style="text-align:left;">1.96e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTCGTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">1367209</td>
+      <td style="text-align:left;">1367220</td>
+      <td style="text-align:left;">1.97e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTCTTTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">3601571</td>
+      <td style="text-align:left;">3601582</td>
+      <td style="text-align:left;">2.04e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGTGTCTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">33783345</td>
+      <td style="text-align:left;">33783356</td>
+      <td style="text-align:left;">2.04e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGTGTCTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">35894987</td>
+      <td style="text-align:left;">35894998</td>
+      <td style="text-align:left;">2.06e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">54651943</td>
+      <td style="text-align:left;">54651954</td>
+      <td style="text-align:left;">2.06e-05</td>
+      <td style="text-align:left;">0.804</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">47747872</td>
+      <td style="text-align:left;">47747883</td>
+      <td style="text-align:left;">2.13e-05</td>
+      <td style="text-align:left;">0.813</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTTACGTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">41980145</td>
+      <td style="text-align:left;">41980156</td>
+      <td style="text-align:left;">2.39e-05</td>
+      <td style="text-align:left;">0.894</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTGCGTCTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">19335250</td>
+      <td style="text-align:left;">19335261</td>
+      <td style="text-align:left;">2.68e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTTCTTCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold4</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">25354795</td>
+      <td style="text-align:left;">25354806</td>
+      <td style="text-align:left;">2.69e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGAACGTCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">6825504</td>
+      <td style="text-align:left;">6825515</td>
+      <td style="text-align:left;">2.72e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACGTATGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1558995</td>
+      <td style="text-align:left;">1559006</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">1559039</td>
+      <td style="text-align:left;">1559050</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">13908173</td>
+      <td style="text-align:left;">13908184</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGTCTTAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">34006159</td>
+      <td style="text-align:left;">34006170</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">34006189</td>
+      <td style="text-align:left;">34006200</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">53112647</td>
+      <td style="text-align:left;">53112658</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">55049379</td>
+      <td style="text-align:left;">55049390</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">55049379</td>
+      <td style="text-align:left;">55049390</td>
+      <td style="text-align:left;">3.01e-05</td>
+      <td style="text-align:left;">0.914</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">49378189</td>
+      <td style="text-align:left;">49378200</td>
+      <td style="text-align:left;">3.17e-05</td>
+      <td style="text-align:left;">0.944</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3601588</td>
+      <td style="text-align:left;">3601599</td>
+      <td style="text-align:left;">3.4e-05</td>
+      <td style="text-align:left;">0.996</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTGTTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">50986599</td>
+      <td style="text-align:left;">50986610</td>
+      <td style="text-align:left;">3.46e-05</td>
+      <td style="text-align:left;">0.997</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACGTTTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">4115551</td>
+      <td style="text-align:left;">4115562</td>
+      <td style="text-align:left;">3.71e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATGTCTTTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">9733156</td>
+      <td style="text-align:left;">9733167</td>
+      <td style="text-align:left;">4e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACTACGTGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">9742244</td>
+      <td style="text-align:left;">9742255</td>
+      <td style="text-align:left;">4e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACTACGTGTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">30771316</td>
+      <td style="text-align:left;">30771327</td>
+      <td style="text-align:left;">4.34e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTGTTAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">41787221</td>
+      <td style="text-align:left;">41787232</td>
+      <td style="text-align:left;">4.34e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATTTCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">55045625</td>
+      <td style="text-align:left;">55045636</td>
+      <td style="text-align:left;">4.36e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTGTAAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">5841870</td>
+      <td style="text-align:left;">5841881</td>
+      <td style="text-align:left;">4.64e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTGCGTCGGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold4</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">19072534</td>
+      <td style="text-align:left;">19072545</td>
+      <td style="text-align:left;">4.89e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACGTGTGGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42230002</td>
+      <td style="text-align:left;">42230013</td>
+      <td style="text-align:left;">4.89e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACTACTTCTGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold9</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">22741682</td>
+      <td style="text-align:left;">22741693</td>
+      <td style="text-align:left;">4.94e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGGTTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold9</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">22741682</td>
+      <td style="text-align:left;">22741693</td>
+      <td style="text-align:left;">4.94e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGGTTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5966577</td>
+      <td style="text-align:left;">5966588</td>
+      <td style="text-align:left;">5.29e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACGTGTTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">14973526</td>
+      <td style="text-align:left;">14973537</td>
+      <td style="text-align:left;">5.39e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTAAGTCTTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold11</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3764174</td>
+      <td style="text-align:left;">3764185</td>
+      <td style="text-align:left;">5.67e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATTTCTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1815204</td>
+      <td style="text-align:left;">1815215</td>
+      <td style="text-align:left;">5.93e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAGCGGCTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold11</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">6037000</td>
+      <td style="text-align:left;">6037011</td>
+      <td style="text-align:left;">6.12e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATGTGGGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">40321175</td>
+      <td style="text-align:left;">40321186</td>
+      <td style="text-align:left;">6.17e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATGTTTGAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">45463987</td>
+      <td style="text-align:left;">45463998</td>
+      <td style="text-align:left;">6.2e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACAACTTCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">6826270</td>
+      <td style="text-align:left;">6826281</td>
+      <td style="text-align:left;">6.22e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAGCGTCGTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">49655177</td>
+      <td style="text-align:left;">49655188</td>
+      <td style="text-align:left;">6.43e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATTAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">207205</td>
+      <td style="text-align:left;">207216</td>
+      <td style="text-align:left;">6.5e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTTTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">34544797</td>
+      <td style="text-align:left;">34544808</td>
+      <td style="text-align:left;">6.61e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTGTATC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4107648</td>
+      <td style="text-align:left;">4107659</td>
+      <td style="text-align:left;">6.8e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTATTAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold4</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">25032964</td>
+      <td style="text-align:left;">25032975</td>
+      <td style="text-align:left;">7.02e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTCTCGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold4</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">25032964</td>
+      <td style="text-align:left;">25032975</td>
+      <td style="text-align:left;">7.02e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTCTCGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5346762</td>
+      <td style="text-align:left;">5346773</td>
+      <td style="text-align:left;">7.27e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACGTCTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">31096906</td>
+      <td style="text-align:left;">31096917</td>
+      <td style="text-align:left;">7.35e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTACTTCTAGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">43522535</td>
+      <td style="text-align:left;">43522546</td>
+      <td style="text-align:left;">7.37e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACGTCGGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">6821107</td>
+      <td style="text-align:left;">6821118</td>
+      <td style="text-align:left;">7.51e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTATATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">37991208</td>
+      <td style="text-align:left;">37991219</td>
+      <td style="text-align:left;">7.53e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGTGTGTGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">644913</td>
+      <td style="text-align:left;">644924</td>
+      <td style="text-align:left;">7.64e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTGTGTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">9735992</td>
+      <td style="text-align:left;">9736003</td>
+      <td style="text-align:left;">7.68e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTGCGTCTTTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4277698</td>
+      <td style="text-align:left;">4277709</td>
+      <td style="text-align:left;">7.84e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTTCTTCTGGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">14966863</td>
+      <td style="text-align:left;">14966874</td>
+      <td style="text-align:left;">7.98e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATGTTTGCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold1</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">33784834</td>
+      <td style="text-align:left;">33784845</td>
+      <td style="text-align:left;">7.98e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTATTTCTGTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">5297613</td>
+      <td style="text-align:left;">5297624</td>
+      <td style="text-align:left;">8.15e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACAACGTCTTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold7</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">738997</td>
+      <td style="text-align:left;">739008</td>
+      <td style="text-align:left;">8.3e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGGGTAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">1559019</td>
+      <td style="text-align:left;">1559030</td>
+      <td style="text-align:left;">8.53e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTCTCAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold10</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">7361381</td>
+      <td style="text-align:left;">7361392</td>
+      <td style="text-align:left;">8.53e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATACGTATTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">54651949</td>
+      <td style="text-align:left;">54651960</td>
+      <td style="text-align:left;">8.66e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTGTCGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">12508690</td>
+      <td style="text-align:left;">12508701</td>
+      <td style="text-align:left;">8.77e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTTCGGCTTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">54651556</td>
+      <td style="text-align:left;">54651567</td>
+      <td style="text-align:left;">8.84e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTCTCAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">45455885</td>
+      <td style="text-align:left;">45455896</td>
+      <td style="text-align:left;">9.18e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACTTATAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">53112657</td>
+      <td style="text-align:left;">53112668</td>
+      <td style="text-align:left;">9.18e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTCTGAG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">45463935</td>
+      <td style="text-align:left;">45463946</td>
+      <td style="text-align:left;">9.39e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTGCGTCTAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">41984012</td>
+      <td style="text-align:left;">41984023</td>
+      <td style="text-align:left;">9.48e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCGTATTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold6</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3355827</td>
+      <td style="text-align:left;">3355838</td>
+      <td style="text-align:left;">9.6e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACAACGTCTGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold2</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">641430</td>
+      <td style="text-align:left;">641441</td>
+      <td style="text-align:left;">9.63e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTACGTAGAGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold9</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">34208629</td>
+      <td style="text-align:left;">34208640</td>
+      <td style="text-align:left;">9.63e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAATGGCTGGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold3</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">7709228</td>
+      <td style="text-align:left;">7709239</td>
+      <td style="text-align:left;">9.74e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTCTTAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">37852669</td>
+      <td style="text-align:left;">37852680</td>
+      <td style="text-align:left;">9.82e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTACGTCTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">37852669</td>
+      <td style="text-align:left;">37852680</td>
+      <td style="text-align:left;">9.82e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATTACGTCTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold5</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2706564</td>
+      <td style="text-align:left;">2706575</td>
+      <td style="text-align:left;">9.91e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAACGTTTTCC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">4-AGTACGTCTGGC</td>
+      <td style="text-align:left;">STREME-4</td>
+      <td style="text-align:left;">Scaffold8</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">39618455</td>
+      <td style="text-align:left;">39618466</td>
+      <td style="text-align:left;">9.97e-05</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTGCTTGTTGT</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --verbosity 1 --oc fimo_out_1 --bgfile ./background --motif 4-AGTACGTCTGGC streme_out/streme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = fimo_out_1</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = streme_out/streme.xml</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = p_drought_all_cpNADP-ME4-1_cluster.fa</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = ./background</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = DNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = true</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 0.0001</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>

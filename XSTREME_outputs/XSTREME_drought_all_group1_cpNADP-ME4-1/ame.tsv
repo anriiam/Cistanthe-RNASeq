@@ -1,0 +1,8 @@
+rank	motif_DB	motif_ID	motif_alt_ID	consensus	p-value	adj_p-value	E-value	tests	FASTA_max	pos	neg	PWM_min	TP	%TP	FP	%FP
+1	motif_db/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1758.1	HSFA1E	AGAAGMTTCTAGAAG	1.51e-9	3.66e-7	2.40e-4	243	442	442	2000	1.97	62	14.03	106	5.30
+2	motif_db/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1759.1	HSFA4A	WNNAGAAGCTTCTAGAAGM	4.71e-9	1.18e-6	7.75e-4	251	442	442	2000	7.42	38	8.60	46	2.30
+3	motif_db/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1760.1	HSFA6A	GAAGNTTCTAGAA	1.23e-7	1.68e-5	1.10e-2	137	442	442	2000	20	21	4.75	16	0.80
+
+# AME (Analysis of Motif Enrichment): Version 5.5.7 compiled on Aug 29 2024 at 17:49:19
+# The format of this file is described at https://meme-suite.org/meme/doc/ame-output-format.html.
+# ame --verbose 1 --oc . --scoring avg --method fisher --hit-lo-fraction 0.25 --evalue-report-threshold 1.0 --control 2KB_UP_DOWN_random.fa p_drought_all_cpNADP-ME4-1_cluster.fa motif_db/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme

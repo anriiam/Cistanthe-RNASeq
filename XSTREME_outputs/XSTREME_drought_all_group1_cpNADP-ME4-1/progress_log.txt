@@ -1,0 +1,78 @@
+Invoking:
+  getsize p_drought_all_cpNADP-ME4-1_cluster.fa 1> $metrics
+Finished invoke:
+  name: count_primary_seqs  status: 0  time: 0.010741
+Invoking:
+  getsize 2KB_UP_DOWN_random.fa 1> $metrics
+Finished invoke:
+  name: count_control_seqs  status: 0  time: 0.0369
+Invoking:
+  fasta-get-markov -nostatus -nosummary -dna -m 2 -pseudo 1 2KB_UP_DOWN_random.fa ./background
+Finished invoke:
+  name: bg  status: 0  time: 0.038342
+Invoking:
+  streme --verbosity 1 --oc streme_out -dna --minw 6 --maxw 15 --order 2 --bfile ./background --seed 0 --align center --time 4740 --totallength 4000000 --evalue --thresh 0.05 --p p_drought_all_cpNADP-ME4-1_cluster.fa --n 2KB_UP_DOWN_random.fa
+Finished invoke:
+  name: streme  status: 0  time: 117.674431
+Invoking:
+  meme -oc meme_out -mod zoops -minw 6 -maxw 15 -bfile ./background -markov_order 2 -seed 0 -dna -revcomp -evt 0.05 -nostatus -time 7081 -searchsize 100000 p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: meme  status: 0  time: 1324.145951
+Invoking:
+  sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p p_drought_all_cpNADP-ME4-1_cluster.fa --n 2KB_UP_DOWN_random.fa
+Finished invoke:
+  name: sea_disc  status: 0  time: 6.40446
+Invoking:
+  sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p p_drought_all_cpNADP-ME4-1_cluster.fa --n 2KB_UP_DOWN_random.fa
+Finished invoke:
+  name: sea  status: 0  time: 443.212956
+Invoking:
+  sea --verbosity 1 --oc distr_out --pvalue --thresh 1 --hofract 0 --order 2 --bfile ./background --seed 0 --motif-pseudo 0.01 --no-pgc --p p_drought_all_cpNADP-ME4-1_cluster.fa --m ./combined.meme
+Finished invoke:
+  name: distr_sea  status: 0  time: 3.992465
+Invoking:
+  tomtom -verbosity 1 -oc streme_tomtom_out -min-overlap 5 -dist ed -evalue -thresh 1 -no-ssc streme_out/streme.xml db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme
+Finished invoke:
+  name: streme_tomtom  status: 0  time: 2.97508
+Invoking:
+  tomtom -verbosity 1 -oc meme_tomtom_out -min-overlap 5 -dist ed -evalue -thresh 1 -no-ssc meme_out/meme.xml db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme
+Finished invoke:
+  name: meme_tomtom  status: 0  time: 6.670675
+Invoking:
+  tomtom -verbosity 1 -text -thresh 0.1 ./combined.meme ./combined.meme 1> ./motif_alignment.txt
+Finished invoke:
+  name: align_tomtom  status: 0  time: 0.166899
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_1 --bgfile ./background --motif 4-AGTACGTCTGGC streme_out/streme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo1  status: 0  time: 0.50339
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_2 --bgfile ./background --motif 2-AAACCAAACATCA streme_out/streme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo2  status: 0  time: 0.501875
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_3 --bgfile ./background --motif 1-ATATAAGTA streme_out/streme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo3  status: 0  time: 0.498301
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_4 --bgfile ./background --motif TTTYTTTTTYTTTTT meme_out/meme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo4  status: 0  time: 0.820089
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_5 --bgfile ./background --motif GGRGGGKGKKKGGRG meme_out/meme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo5  status: 0  time: 0.820912
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_6 --bgfile ./background --motif GAGGAGAGAGA meme_out/meme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo6  status: 0  time: 0.791588
+Invoking:
+  fimo --verbosity 1 --oc fimo_out_7 --bgfile ./background --motif 3-ATATCTCATATG streme_out/streme.xml p_drought_all_cpNADP-ME4-1_cluster.fa
+Finished invoke:
+  name: fimo7  status: 0  time: 0.503616
+Writing output
+Invoking:
+  xstreme_html_to_tsv ./xstreme.html ./xstreme.tsv "xstreme --oc . --time 240 --streme-totallength 4000000 --meme-searchsize 100000 --dna --evt 0.05 --minw 6 --maxw 15 --align center --meme-mod zoops --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p p_drought_all_cpNADP-ME4-1_cluster.fa -n 2KB_UP_DOWN_random.fa" 5.5.7 "Wed Jun 19 13\:59\:04 2024 -0700"
+Finished invoke:
+  name: summary  status: 0  time: 0.096595
+Done

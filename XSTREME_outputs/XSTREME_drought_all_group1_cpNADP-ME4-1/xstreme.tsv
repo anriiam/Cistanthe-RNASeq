@@ -1,0 +1,14 @@
+RANK	SEED_MOTIF	CLUSTER	SOURCE	ID	ALT_ID	CONSENSUS	WIDTH	SITES	SEA_PVALUE	EVALUE	EVALUE_ACC	SIM_SOURCE	SIM_MOTIF	MOTIF_URL
+1	1	1	STREME	4-AGTACGTCTGGC	STREME-4	AGTACGTCTGGC	12	21	5.89e-010	4.00e+000	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1835.1 (TFLG2-Zm00001d042777)	http://jaspar2022.genereg.net/matrix/MA1835.1
+2	1	2	STREME	2-AAACCAAACATCA	STREME-2	AAACCAAACATCA	13	36	2.08e-005	6.00e-001	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA2025.1 (MYB93)	http://jaspar2022.genereg.net/matrix/MA2025.1
+3	1	3	STREME	1-ATATAAGTA	STREME-1	ATATAAGTA	9	160	8.78e-005	1.80e-001	1	STREME	1-ATATAAGTA	 
+4	1	4	MEME	TTTYTTTTTYTTTTT	MEME-3	TTTYTTTTTYTTTTT	15	418	1.45e-003	6.00e-044	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1268.1 (CDF5)	http://jaspar2022.genereg.net/matrix/MA1268.1
+5	1	5	MEME	GGRGGGKGKKKGGRG	MEME-4	GGRGGGKGKKKGGRG	15	431	8.55e-003	1.90e-026	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1232.1 (ERF054)	http://jaspar2022.genereg.net/matrix/MA1232.1
+6	1	6	MEME	GAGGAGAGAGA	MEME-5	GAGGAGAGAGA	11	146	1.35e-002	6.30e-007	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1416.1 (RAMOSA1)	http://jaspar2022.genereg.net/matrix/MA1416.1
+7	0	6	MEME	CTCTCTCTCTCTCTC	MEME-1	CTCTCTCTCTCTCTC	15	348	4.55e-002	1.60e-099	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1404.1 (BPC1)	http://jaspar2022.genereg.net/matrix/MA1404.1
+8	0	6	MEME	TCTCTCTCTCTCTCT	MEME-2	TCTCTCTCTCTCTCT	15	191	2.23e-001	2.90e-044	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1402.1 (BPC6)	http://jaspar2022.genereg.net/matrix/MA1402.1
+9	1	7	STREME	3-ATATCTCATATG	STREME-3	ATATCTCATATG	12	24	8.39e-001	2.20e+000	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA0972.1 (CCA1)	http://jaspar2022.genereg.net/matrix/MA0972.1
+
+# XSTREME (Motif Discovery and Enrichment Analysis): Version 5.5.7 released on Wed Jun 19 13:59:04 2024 -0700
+# The format of this file is described at https://meme-suite.org/meme/doc/xstreme-output-format.html
+# xstreme --oc . --time 240 --streme-totallength 4000000 --meme-searchsize 100000 --dna --evt 0.05 --minw 6 --maxw 15 --align center --meme-mod zoops --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p p_drought_all_cpNADP-ME4-1_cluster.fa -n 2KB_UP_DOWN_random.fa
