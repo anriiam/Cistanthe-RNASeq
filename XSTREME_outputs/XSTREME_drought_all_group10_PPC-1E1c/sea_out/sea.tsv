@@ -1,0 +1,10 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	3-AAACCCTAAACCCC	STREME-3	AAACCCTAAACCCC	88	6.63	29	1.61	4.02	17	2.26e-13	-29.12	1.51e-10	-22.62	1.44e-10	-22.66
+2	streme_out/streme.xml	4-CTTTGGTTTCAG	STREME-4	CTTTGGTTTCAG	191	14.39	148	8.22	1.75	12	3.46e-8	-17.18	2.30e-5	-10.68	1.10e-5	-11.41
+3	streme_out/streme.xml	2-AGAAACTAT	STREME-2	AGAAACTAT	105	7.91	72	4.00	1.97	15	2.44e-6	-12.92	1.62e-3	-6.42	5.18e-4	-7.56
+4	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1802.1	TRP5	NHWAAACCYH	340	25.62	341	18.94	1.35	10	5.15e-6	-12.18	3.43e-3	-5.68	8.21e-4	-7.11
+5	meme_out/meme.xml	AAAAAAAAABAAAAA	MEME-5	AAAAAAAAABAAAAA	1182	89.07	1505	83.61	1.07	8.5	7.31e-6	-11.83	4.87e-3	-5.33	9.32e-4	-6.98
+
+# SEA (Simple Enrichment Analysis): Version 5.5.7 compiled on Aug 29 2024 at 17:50:21
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p 2KB_UP_DOWN_drought_1E1c_cluster_all.fa --n 2KB_UP_DOWN_random.fa

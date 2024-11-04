@@ -1,0 +1,15 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	3-AAACCCTAAACCCC	STREME-3	AAACCCTAAACCCC	88	6.63	29	1.61	4.02	17	2.26e-13	-29.12	2.26e-12	-26.81	2.26e-12	-26.81
+2	streme_out/streme.xml	4-CTTTGGTTTCAG	STREME-4	CTTTGGTTTCAG	191	14.39	148	8.22	1.75	12	3.46e-8	-17.18	3.46e-7	-14.88	1.73e-7	-15.57
+3	streme_out/streme.xml	2-AGAAACTAT	STREME-2	AGAAACTAT	105	7.91	72	4.00	1.97	15	2.44e-6	-12.92	2.44e-5	-10.62	8.13e-6	-11.72
+4	meme_out/meme.xml	AAAAAAAAABAAAAA	MEME-5	AAAAAAAAABAAAAA	1182	89.07	1505	83.61	1.07	8.5	7.31e-6	-11.83	7.31e-5	-9.52	1.83e-5	-10.91
+5	meme_out/meme.xml	CCCCCCCCCCCCCCC	MEME-2	CCCCCCCCCCCCCCC	847	63.83	1038	57.67	1.11	9.1	2.82e-4	-8.17	2.82e-3	-5.87	5.63e-4	-7.48
+6	streme_out/streme.xml	5-TAATTTTGATCAAT	STREME-5	TAATTTTGATCAAT	441	33.23	519	28.83	1.15	10	4.75e-3	-5.35	4.75e-2	-3.05	7.92e-3	-4.84
+7	streme_out/streme.xml	1-ACAGCTTCTYWCAT	STREME-1	ACAGCTTCTYWCAT	122	9.19	124	6.89	1.33	17	1.10e-2	-4.51	1.10e-1	-2.21	1.57e-2	-4.15
+8	meme_out/meme.xml	GARAGARARAGARRR	MEME-4	GARAGARARAGARRR	846	63.75	1087	60.39	1.06	13	3.02e-2	-3.50	3.02e-1	-1.20	3.78e-2	-3.28
+9	meme_out/meme.xml	AAAAARAAAAARAAA	MEME-3	AAAAARAAAAARAAA	95	7.16	118	6.56	1.09	18	2.77e-1	-1.28	2.77e0	1.02	2.99e-1	-1.21
+10	meme_out/meme.xml	GAGAGAGAGAGAGAG	MEME-1	GAGAGAGAGAGAGAG	945	71.21	1265	70.28	1.01	2.3	2.99e-1	-1.21	2.99e0	1.09	2.99e-1	-1.21
+
+# SEA (Simple Enrichment Analysis): Version 5.5.7 compiled on Aug 29 2024 at 17:50:21
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p 2KB_UP_DOWN_drought_1E1c_cluster_all.fa --n 2KB_UP_DOWN_random.fa
