@@ -1,0 +1,16 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1183.1	RVE6	AGATATTTTTD	174	34.12	322	17.89	1.91	11	2.56e-14	-31.30	1.71e-11	-24.79	1.69e-11	-24.81
+2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1185.1	LHY	AGATATTTTN	168	32.94	313	17.39	1.9	12	1.53e-13	-29.51	1.02e-10	-23.00	5.03e-11	-23.71
+3	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1182.1	RVE8	AGATATTTTWDD	112	21.96	170	9.44	2.33	13	5.40e-13	-28.25	3.62e-10	-21.74	1.19e-10	-22.85
+4	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1190.1	RVE5	AGATATTTTTD	171	33.53	330	18.33	1.83	11	9.80e-13	-27.65	6.57e-10	-21.14	1.61e-10	-22.55
+5	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA0972.1	CCA1	AAATATCT	153	30.00	287	15.94	1.88	13	5.25e-12	-25.97	3.52e-9	-19.47	6.92e-10	-21.09
+6	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1187.1	RVE4	AGATATTTTT	91	17.84	130	7.22	2.48	13	1.26e-11	-25.10	8.45e-9	-18.59	1.38e-9	-20.40
+7	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1191.1	RVE7L	HHHVAAAATATCTWA	129	25.29	243	13.50	1.88	13	6.34e-10	-21.18	4.25e-7	-14.67	5.97e-8	-16.63
+8	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1401.1	RVE7	RAAAATATCTWA	80	15.69	119	6.61	2.38	14	1.15e-9	-20.59	7.69e-7	-14.08	9.45e-8	-16.17
+9	streme_out/streme.xml	3-CCGGTTCCAA	STREME-3	CCGGTTCCAA	39	7.65	34	1.89	4.03	15	2.67e-9	-19.74	1.79e-6	-13.23	1.95e-7	-15.45
+10	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1184.1	RVE1	HHVWAAATATCTWH	143	28.04	291	16.17	1.74	12	3.51e-9	-19.47	2.35e-6	-12.96	2.31e-7	-15.28
+11	streme_out/streme.xml	1-AAAAATATCTCT	STREME-1	AAAAATATCTCT	120	23.53	230	12.78	1.85	11	7.13e-9	-18.76	4.78e-6	-12.25	4.27e-7	-14.67
+
+# SEA (Simple Enrichment Analysis): Version 5.5.7 compiled on Aug 29 2024 at 17:50:21
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p postflowering_all_cNAD-MDH1-1_cluster.fa --n 2KB_UP_DOWN_random.fa

@@ -1,0 +1,2714 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo --verbosity 1 --oc fimo_out_1 --bgfile ./background --motif 3-CCGGTTCCAA streme_out/streme.xml postflowering_all_cNAD-MDH1-1_cluster.fa</command-line>
+<pattern-file>streme_out/streme.xml</pattern-file>
+<sequence-file>postflowering_all_cNAD-MDH1-1_cluster.fa</sequence-file>
+<site-pvalue-cutoff>0.0001</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="3-CCGGTTCCAA" name="STREME-3">
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="18550440" stop="18550431" score="7.04211" pvalue="8.19e-05">
+<sequence>CCGGTGCGAG</sequence>
+<mem:qvalue>0.563</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="24089521" stop="24089512" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+<matched-element start="24089479" stop="24089470" score="15.0421" pvalue="2.83e-06">
+<sequence>CCGGTTCCCA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="24089201" stop="24089192" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="24089497" stop="24089506" score="10.5895" pvalue="2.01e-05">
+<sequence>TCGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="24089098" stop="24089089" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="24089135" stop="24089126" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="24089428" stop="24089419" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="24089141" stop="24089132" score="7.49474" pvalue="6.79e-05">
+<sequence>CAGGTTCCGA</sequence>
+<mem:qvalue>0.51</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="24081144" stop="24081135" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="24081741" stop="24081750" score="7.69474" pvalue="6.17e-05">
+<sequence>CCGGGTACGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="24081870" stop="24081861" score="6.58947" pvalue="9.03e-05">
+<sequence>GCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="28702089" stop="28702080" score="8.74737" pvalue="4.21e-05">
+<sequence>CCAGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="28702656" stop="28702665" score="7.23158" pvalue="7.57e-05">
+<sequence>TCGGTTCCTA</sequence>
+<mem:qvalue>0.55</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="28689196" stop="28689205" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="29505061" stop="29505052" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="29505030" stop="29505021" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="29505161" stop="29505152" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="29505102" stop="29505093" score="8.16842" pvalue="5.91e-05">
+<sequence>CCGGTTCCTT</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="29505108" stop="29505099" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="29513762" stop="29513753" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="29513749" stop="29513758" score="8.38947" pvalue="5.71e-05">
+<sequence>CGGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="29505061" stop="29505052" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="29505030" stop="29505021" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="29505161" stop="29505152" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="29505102" stop="29505093" score="8.16842" pvalue="5.91e-05">
+<sequence>CCGGTTCCTT</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="29505108" stop="29505099" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="29511940" stop="29511931" score="6.63158" pvalue="8.7e-05">
+<sequence>CAGGGTCCAG</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="32831412" stop="32831421" score="11.5789" pvalue="1.15e-05">
+<sequence>CCGGCTCCAA</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="34883705" stop="34883714" score="9.4" pvalue="3.12e-05">
+<sequence>CCGGATCCGG</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="34883714" stop="34883705" score="9.4" pvalue="3.12e-05">
+<sequence>CCGGATCCGG</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="34887944" stop="34887935" score="13.8947" pvalue="5.92e-06">
+<sequence>CCGGTTCTAA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="41333670" stop="41333661" score="7.73684" pvalue="6.12e-05">
+<sequence>ACGGTTCCCA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="43439299" stop="43439290" score="6.62105" pvalue="8.76e-05">
+<sequence>CCGGGTGGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold1" name="Scaffold1">
+<matched-element start="45719038" stop="45719047" score="6.65263" pvalue="8.48e-05">
+<sequence>TCGGGTCCAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="3607202" stop="3607211" score="16.2421" pvalue="2.01e-06">
+<sequence>CCGGGTCCAG</sequence>
+<mem:qvalue>0.113</mem:qvalue>
+</matched-element>
+<matched-element start="3607519" stop="3607528" score="13.1684" pvalue="6.14e-06">
+<sequence>CCGGGTCCGG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="3606918" stop="3606927" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="6275208" stop="6275217" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="6275532" stop="6275523" score="10.5684" pvalue="2.53e-05">
+<sequence>CAGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="23672037" stop="23672028" score="13.1684" pvalue="6.14e-06">
+<sequence>CCGGGTCCGG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="23671484" stop="23671475" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="24517785" stop="24517776" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="24517796" stop="24517787" score="17.1053" pvalue="1.48e-06">
+<sequence>CCGGTTCCGA</sequence>
+<mem:qvalue>0.104</mem:qvalue>
+</matched-element>
+<matched-element start="24517827" stop="24517818" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="24518271" stop="24518262" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="24518277" stop="24518268" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="24517782" stop="24517791" score="9.33684" pvalue="3.2e-05">
+<sequence>CCGGATCGGA</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="24517868" stop="24517859" score="8.16842" pvalue="5.91e-05">
+<sequence>CCGGTTCCTT</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="24517874" stop="24517865" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="24518283" stop="24518274" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="24518295" stop="24518304" score="7.21053" pvalue="8.1e-05">
+<sequence>CTGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="24518319" stop="24518310" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCT</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="26553375" stop="26553366" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+<matched-element start="26553390" stop="26553381" score="8.41053" pvalue="5.19e-05">
+<sequence>TCGGTTCGAA</sequence>
+<mem:qvalue>0.462</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="27164660" stop="27164651" score="7.28421" pvalue="7.33e-05">
+<sequence>CCGGCTCGAG</sequence>
+<mem:qvalue>0.54</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="28672155" stop="28672146" score="6.62105" pvalue="8.76e-05">
+<sequence>CCGGGTTGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="31107934" stop="31107943" score="8.8" pvalue="3.77e-05">
+<sequence>CCGGGTTCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="31109153" stop="31109162" score="8.74737" pvalue="4.21e-05">
+<sequence>CTGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="31109092" stop="31109101" score="7.52632" pvalue="6.42e-05">
+<sequence>CCGGGTCGAC</sequence>
+<mem:qvalue>0.486</mem:qvalue>
+</matched-element>
+<matched-element start="31109080" stop="31109089" score="7.33684" pvalue="7.25e-05">
+<sequence>CCGGATCCCG</sequence>
+<mem:qvalue>0.538</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="31105080" stop="31105089" score="8.45263" pvalue="4.82e-05">
+<sequence>CCAGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="35361433" stop="35361442" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="35361709" stop="35361700" score="11.7789" pvalue="1.09e-05">
+<sequence>CCGGTTCTAG</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="36685515" stop="36685506" score="7.28421" pvalue="7.33e-05">
+<sequence>CCGGCTCGAG</sequence>
+<mem:qvalue>0.54</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="36692265" stop="36692274" score="8.45263" pvalue="4.82e-05">
+<sequence>CCGTTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+<matched-element start="37023253" stop="37023244" score="10.5684" pvalue="2.53e-05">
+<sequence>CGGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="37023364" stop="37023355" score="6.29474" pvalue="9.66e-05">
+<sequence>TCGGTTCGAG</sequence>
+<mem:qvalue>0.582</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold10" name="Scaffold10">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="1934317" stop="1934308" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="1935176" stop="1935185" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+<matched-element start="1935424" stop="1935433" score="7.21053" pvalue="8.1e-05">
+<sequence>CCGATTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="1939306" stop="1939315" score="7.74737" pvalue="6.08e-05">
+<sequence>CCGGGTACCA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="2455354" stop="2455363" score="11.3368" pvalue="1.39e-05">
+<sequence>CCGGTACCAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="2885527" stop="2885536" score="8.74737" pvalue="4.21e-05">
+<sequence>CCCGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="3662234" stop="3662225" score="11.5789" pvalue="1.15e-05">
+<sequence>CCGGCTCCAA</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+<matched-element start="3661060" stop="3661069" score="8.45263" pvalue="4.82e-05">
+<sequence>CCAGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="4455093" stop="4455102" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="4453951" stop="4453960" score="7.33684" pvalue="7.25e-05">
+<sequence>CCGGGGCGAA</sequence>
+<mem:qvalue>0.538</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="6562088" stop="6562079" score="11.3474" pvalue="1.31e-05">
+<sequence>CCGGTTACTA</sequence>
+<mem:qvalue>0.323</mem:qvalue>
+</matched-element>
+<matched-element start="6561795" stop="6561804" score="7.33684" pvalue="7.25e-05">
+<sequence>CCGGGACGAA</sequence>
+<mem:qvalue>0.538</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="10593638" stop="10593647" score="7.21053" pvalue="8.1e-05">
+<sequence>CCGATTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="10615176" stop="10615185" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="10615045" stop="10615054" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="10614732" stop="10614741" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="10615442" stop="10615451" score="11.3368" pvalue="1.39e-05">
+<sequence>CCGGTGCCAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="10615031" stop="10615022" score="8.45263" pvalue="4.82e-05">
+<sequence>CAGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10615145" stop="10615154" score="8.45263" pvalue="4.82e-05">
+<sequence>CTGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10615151" stop="10615160" score="8.45263" pvalue="4.82e-05">
+<sequence>CCAGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10614695" stop="10614704" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="10614683" stop="10614674" score="7.21053" pvalue="8.1e-05">
+<sequence>CTGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10614725" stop="10614716" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10615086" stop="10615077" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10614701" stop="10614710" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="10615176" stop="10615185" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="10615045" stop="10615054" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="10614732" stop="10614741" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="10615442" stop="10615451" score="11.3368" pvalue="1.39e-05">
+<sequence>CCGGTGCCAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="10615031" stop="10615022" score="8.45263" pvalue="4.82e-05">
+<sequence>CAGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10615145" stop="10615154" score="8.45263" pvalue="4.82e-05">
+<sequence>CTGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10615151" stop="10615160" score="8.45263" pvalue="4.82e-05">
+<sequence>CCAGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10614695" stop="10614704" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="10614683" stop="10614674" score="7.21053" pvalue="8.1e-05">
+<sequence>CTGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10614725" stop="10614716" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10615086" stop="10615077" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+<matched-element start="10614701" stop="10614710" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="11235315" stop="11235324" score="9.06316" pvalue="3.57e-05">
+<sequence>CCGGGTCAAA</sequence>
+<mem:qvalue>0.431</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="12863902" stop="12863893" score="8.74737" pvalue="4.21e-05">
+<sequence>CCGAGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="12875720" stop="12875711" score="7.52632" pvalue="6.42e-05">
+<sequence>CCGGGTCGAT</sequence>
+<mem:qvalue>0.486</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="12863902" stop="12863893" score="8.74737" pvalue="4.21e-05">
+<sequence>CCGAGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="12875720" stop="12875711" score="7.52632" pvalue="6.42e-05">
+<sequence>CCGGGTCGAT</sequence>
+<mem:qvalue>0.486</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="14037650" stop="14037659" score="8.50526" pvalue="4.42e-05">
+<sequence>CCGGCTCCGA</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="18606568" stop="18606577" score="8.74737" pvalue="4.21e-05">
+<sequence>CCGCGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+<matched-element start="31329588" stop="31329597" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGTTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="31329363" stop="31329354" score="9.06316" pvalue="3.57e-05">
+<sequence>CCGGGTCAAA</sequence>
+<mem:qvalue>0.431</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold11" name="Scaffold11">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="352150" stop="352141" score="9.11579" pvalue="3.53e-05">
+<sequence>CCGGATACAA</sequence>
+<mem:qvalue>0.431</mem:qvalue>
+</matched-element>
+<matched-element start="353220" stop="353211" score="7.21053" pvalue="8.1e-05">
+<sequence>CCCGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="731756" stop="731765" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="731418" stop="731409" score="14.7053" pvalue="4.33e-06">
+<sequence>CCGGTTACAA</sequence>
+<mem:qvalue>0.157</mem:qvalue>
+</matched-element>
+<matched-element start="731466" stop="731457" score="9.70526" pvalue="2.79e-05">
+<sequence>CCGGGTCCAT</sequence>
+<mem:qvalue>0.385</mem:qvalue>
+</matched-element>
+<matched-element start="731415" stop="731424" score="7.97895" pvalue="6.02e-05">
+<sequence>CCGGTCCCTA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="2671765" stop="2671774" score="12.0737" pvalue="1.05e-05">
+<sequence>CCGGGTCTAA</sequence>
+<mem:qvalue>0.285</mem:qvalue>
+</matched-element>
+<matched-element start="2671784" stop="2671775" score="8.38947" pvalue="5.71e-05">
+<sequence>CCGATTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="6378234" stop="6378243" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="6378234" stop="6378243" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="9296971" stop="9296962" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="9303837" stop="9303846" score="10.7053" pvalue="1.73e-05">
+<sequence>CCGGGTCGTG</sequence>
+<mem:qvalue>0.337</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="9922800" stop="9922791" score="10.8842" pvalue="1.57e-05">
+<sequence>CCGGTTCAAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="10573373" stop="10573382" score="9.52632" pvalue="2.86e-05">
+<sequence>CCGGGTACTA</sequence>
+<mem:qvalue>0.389</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="11419322" stop="11419331" score="6.65263" pvalue="8.48e-05">
+<sequence>TCGGGTCCAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="11700931" stop="11700922" score="10.9895" pvalue="1.5e-05">
+<sequence>CCGGGTCGGG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="11906698" stop="11906707" score="15.0421" pvalue="2.83e-06">
+<sequence>CCGGTTCCCA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="11906722" stop="11906713" score="15.0421" pvalue="2.83e-06">
+<sequence>CCGGTTCCCA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="11906680" stop="11906671" score="14.9895" pvalue="3.2e-06">
+<sequence>CCGGTTCCGG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="11906776" stop="11906785" score="12.5895" pvalue="8.59e-06">
+<sequence>CCGGTTACAG</sequence>
+<mem:qvalue>0.239</mem:qvalue>
+</matched-element>
+<matched-element start="11906315" stop="11906306" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="11906351" stop="11906342" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="11906453" stop="11906444" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="11906398" stop="11906389" score="8.71579" pvalue="4.25e-05">
+<sequence>CCGGGTCTTA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="11906779" stop="11906770" score="8.44211" pvalue="4.93e-05">
+<sequence>CCGGTTTGAA</sequence>
+<mem:qvalue>0.455</mem:qvalue>
+</matched-element>
+<matched-element start="11906411" stop="11906420" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="15297673" stop="15297664" score="6.56842" pvalue="9.33e-05">
+<sequence>CAGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="50658114" stop="50658123" score="6.62105" pvalue="8.76e-05">
+<sequence>CCGGGTTGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="50665735" stop="50665744" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTATAA</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="50722138" stop="50722129" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="50722427" stop="50722436" score="9.15789" pvalue="3.44e-05">
+<sequence>CCGGTCCGAA</sequence>
+<mem:qvalue>0.426</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="50726899" stop="50726908" score="6.75789" pvalue="8.4e-05">
+<sequence>ACGGGTCGAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+<matched-element start="54544508" stop="54544517" score="10.8211" pvalue="1.61e-05">
+<sequence>CCGGTTCTGA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold2" name="Scaffold2">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="1774672" stop="1774663" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="1904515" stop="1904524" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="1905960" stop="1905969" score="9.70526" pvalue="2.79e-05">
+<sequence>CCGGGTCCAT</sequence>
+<mem:qvalue>0.385</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="3551172" stop="3551181" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+<matched-element start="3551160" stop="3551151" score="9.8" pvalue="2.75e-05">
+<sequence>ACGGTTCCGA</sequence>
+<mem:qvalue>0.385</mem:qvalue>
+</matched-element>
+<matched-element start="3551202" stop="3551193" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="3551196" stop="3551187" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+<matched-element start="3551238" stop="3551229" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCT</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="5903429" stop="5903438" score="8.41053" pvalue="5.19e-05">
+<sequence>TCGGTTCGAA</sequence>
+<mem:qvalue>0.462</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="17895023" stop="17895014" score="8.38947" pvalue="5.71e-05">
+<sequence>CTGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="17876825" stop="17876816" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCT</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="27175928" stop="27175937" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="27176169" stop="27176178" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="27160387" stop="27160396" score="10.2947" pvalue="2.66e-05">
+<sequence>CCGGATCGAG</sequence>
+<mem:qvalue>0.382</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="34735175" stop="34735184" score="9.51579" pvalue="3e-05">
+<sequence>CCGGGGCCAA</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="34735668" stop="34735659" score="7.23158" pvalue="7.57e-05">
+<sequence>GCGGTTCCTA</sequence>
+<mem:qvalue>0.55</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="37428319" stop="37428328" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="42767179" stop="42767188" score="14.5895" pvalue="5.12e-06">
+<sequence>CCGGATCCAA</sequence>
+<mem:qvalue>0.183</mem:qvalue>
+</matched-element>
+<matched-element start="42766130" stop="42766139" score="7.21053" pvalue="8.1e-05">
+<sequence>CGGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="48667948" stop="48667957" score="7.97895" pvalue="6.02e-05">
+<sequence>CCGGTACCTA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="48663884" stop="48663875" score="10.9895" pvalue="1.5e-05">
+<sequence>CCGGGTCGGG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="51219023" stop="51219014" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="51220848" stop="51220839" score="10.5684" pvalue="2.53e-05">
+<sequence>CAGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="51210793" stop="51210802" score="10.5684" pvalue="2.53e-05">
+<sequence>CGGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="51211117" stop="51211108" score="8.45263" pvalue="4.82e-05">
+<sequence>CCGGTTCCGT</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="54711662" stop="54711671" score="8.76842" pvalue="3.87e-05">
+<sequence>TCGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="54914638" stop="54914647" score="9.81053" pvalue="2.71e-05">
+<sequence>CCGGGTACGA</sequence>
+<mem:qvalue>0.384</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+<matched-element start="56855009" stop="56855000" score="13.1684" pvalue="6.14e-06">
+<sequence>CCGGGTCCGG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="56854585" stop="56854576" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold3" name="Scaffold3">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="9229477" stop="9229486" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="9229543" stop="9229552" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="9229477" stop="9229486" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="9229543" stop="9229552" score="10.7579" pvalue="1.67e-05">
+<sequence>ACGGTTCCAG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="10387003" stop="10387012" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="19966405" stop="19966396" score="6.34737" pvalue="9.46e-05">
+<sequence>CCGGGTCCTT</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="21442659" stop="21442668" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+<matched-element start="21442545" stop="21442536" score="9.33684" pvalue="3.2e-05">
+<sequence>CCGGATCGGA</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="23633041" stop="23633032" score="17.1053" pvalue="1.48e-06">
+<sequence>CCGGTTCCGA</sequence>
+<mem:qvalue>0.104</mem:qvalue>
+</matched-element>
+<matched-element start="23632675" stop="23632666" score="8.45263" pvalue="4.82e-05">
+<sequence>CAGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="23634971" stop="23634962" score="14.7053" pvalue="4.33e-06">
+<sequence>CCGGTTACAA</sequence>
+<mem:qvalue>0.157</mem:qvalue>
+</matched-element>
+<matched-element start="23636054" stop="23636063" score="12.8105" pvalue="8.2e-06">
+<sequence>CCGGTTCGGG</sequence>
+<mem:qvalue>0.237</mem:qvalue>
+</matched-element>
+<matched-element start="23635869" stop="23635860" score="8.38947" pvalue="5.71e-05">
+<sequence>CGGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="23633041" stop="23633032" score="17.1053" pvalue="1.48e-06">
+<sequence>CCGGTTCCGA</sequence>
+<mem:qvalue>0.104</mem:qvalue>
+</matched-element>
+<matched-element start="23632675" stop="23632666" score="8.45263" pvalue="4.82e-05">
+<sequence>CAGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="27538905" stop="27538914" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="27610584" stop="27610575" score="7.21053" pvalue="8.1e-05">
+<sequence>CGGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="28760207" stop="28760198" score="6.65263" pvalue="8.48e-05">
+<sequence>TCGGGTCCAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="31254654" stop="31254645" score="15.2842" pvalue="2.6e-06">
+<sequence>CCGGGTCCGA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="33506357" stop="33506366" score="14.9263" pvalue="3.43e-06">
+<sequence>CCGGTTCGGA</sequence>
+<mem:qvalue>0.129</mem:qvalue>
+</matched-element>
+<matched-element start="33505537" stop="33505546" score="12.5895" pvalue="8.59e-06">
+<sequence>CCGGTTACAG</sequence>
+<mem:qvalue>0.239</mem:qvalue>
+</matched-element>
+<matched-element start="33505656" stop="33505647" score="12.5895" pvalue="8.59e-06">
+<sequence>CCGGTTACAG</sequence>
+<mem:qvalue>0.239</mem:qvalue>
+</matched-element>
+<matched-element start="33506462" stop="33506453" score="8.76842" pvalue="3.87e-05">
+<sequence>TCGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="33705252" stop="33705261" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGTTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="34626292" stop="34626301" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="34625722" stop="34625713" score="9.16842" pvalue="3.36e-05">
+<sequence>CCGGTTAGTA</sequence>
+<mem:qvalue>0.418</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+<matched-element start="34622636" stop="34622645" score="8.16842" pvalue="5.91e-05">
+<sequence>CCGGTTCCTT</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold4" name="Scaffold4">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="466681" stop="466690" score="6.56842" pvalue="9.33e-05">
+<sequence>CGGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="1250199" stop="1250208" score="9.06316" pvalue="3.57e-05">
+<sequence>CCGGGTCAAA</sequence>
+<mem:qvalue>0.431</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="1767048" stop="1767057" score="10.2947" pvalue="2.66e-05">
+<sequence>CCGGATCGAG</sequence>
+<mem:qvalue>0.382</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="1762402" stop="1762393" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="1767048" stop="1767057" score="10.2947" pvalue="2.66e-05">
+<sequence>CCGGATCGAG</sequence>
+<mem:qvalue>0.382</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="1762402" stop="1762393" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="3192606" stop="3192597" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="3192633" stop="3192642" score="8.71579" pvalue="4.25e-05">
+<sequence>CCGGGTCTTA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="3268436" stop="3268445" score="15.8842" pvalue="2.47e-06">
+<sequence>CCGGTTCGAG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="3268009" stop="3268000" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTATAA</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+<matched-element start="3268006" stop="3268015" score="6.68421" pvalue="8.44e-05">
+<sequence>CCGGGTTCAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="3268436" stop="3268445" score="15.8842" pvalue="2.47e-06">
+<sequence>CCGGTTCGAG</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="3268009" stop="3268000" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTATAA</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+<matched-element start="3268006" stop="3268015" score="6.68421" pvalue="8.44e-05">
+<sequence>CCGGGTTCAG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="7849810" stop="7849801" score="8.74737" pvalue="4.21e-05">
+<sequence>CCGAGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="7849137" stop="7849128" score="8.38947" pvalue="5.71e-05">
+<sequence>CTGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+<matched-element start="7848743" stop="7848734" score="7.04211" pvalue="8.19e-05">
+<sequence>CCGGTACGAG</sequence>
+<mem:qvalue>0.563</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="12429502" stop="12429493" score="11.2316" pvalue="1.43e-05">
+<sequence>CCGGATCCTA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="13675622" stop="13675613" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAT</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="29823625" stop="29823634" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="29823628" stop="29823619" score="8.76842" pvalue="3.87e-05">
+<sequence>CCGGTTCAAG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="29823605" stop="29823596" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="29823644" stop="29823635" score="6.64211" pvalue="8.5e-05">
+<sequence>CCGGTTCTCG</sequence>
+<mem:qvalue>0.57</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="32277586" stop="32277595" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="32277599" stop="32277590" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="32277528" stop="32277519" score="12.9263" pvalue="6.41e-06">
+<sequence>CCGGTTCCCG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="32277509" stop="32277518" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="32277625" stop="32277616" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="32277498" stop="32277489" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="32278160" stop="32278169" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="32277522" stop="32277513" score="6.56842" pvalue="9.33e-05">
+<sequence>CCCGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34102674" stop="34102665" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="34102935" stop="34102944" score="6.56842" pvalue="9.33e-05">
+<sequence>CCAGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34092520" stop="34092529" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="34092684" stop="34092693" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34102674" stop="34102665" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="34102935" stop="34102944" score="6.56842" pvalue="9.33e-05">
+<sequence>CCAGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34092520" stop="34092529" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="34092684" stop="34092693" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34277550" stop="34277541" score="10.8211" pvalue="1.61e-05">
+<sequence>CCGGTTCTGA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="34277571" stop="34277580" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="34278220" stop="34278229" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="34277651" stop="34277642" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTCTTG</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="34277550" stop="34277541" score="10.8211" pvalue="1.61e-05">
+<sequence>CCGGTTCTGA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="34277571" stop="34277580" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="34278220" stop="34278229" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="34277651" stop="34277642" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTCTTG</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="38441982" stop="38441991" score="8.74737" pvalue="4.21e-05">
+<sequence>CCTGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="38466037" stop="38466028" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="38471587" stop="38471596" score="9.52632" pvalue="2.86e-05">
+<sequence>CCGGGTACTA</sequence>
+<mem:qvalue>0.389</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="38466037" stop="38466028" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="38471587" stop="38471596" score="9.52632" pvalue="2.86e-05">
+<sequence>CCGGGTACTA</sequence>
+<mem:qvalue>0.389</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="40111374" stop="40111383" score="8.45263" pvalue="4.82e-05">
+<sequence>CTGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+<matched-element start="45299473" stop="45299482" score="8.42105" pvalue="5.08e-05">
+<sequence>CCGGTTATAA</sequence>
+<mem:qvalue>0.458</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold5" name="Scaffold5">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="283614" stop="283623" score="6.58947" pvalue="9.03e-05">
+<sequence>ACGGTTCTAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="3717796" stop="3717787" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="3703254" stop="3703245" score="8.38947" pvalue="5.71e-05">
+<sequence>CTGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="3717796" stop="3717787" score="20.1789" pvalue="3.93e-07">
+<sequence>CCGGTTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="5198750" stop="5198741" score="10.5684" pvalue="2.53e-05">
+<sequence>CCTGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="5211297" stop="5211306" score="8.74737" pvalue="4.21e-05">
+<sequence>CCTGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="5205433" stop="5205442" score="12.9263" pvalue="6.41e-06">
+<sequence>CCGGTTCCCG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="6533686" stop="6533677" score="12.8737" pvalue="7.61e-06">
+<sequence>ACGGTTCCAA</sequence>
+<mem:qvalue>0.226</mem:qvalue>
+</matched-element>
+<matched-element start="6533438" stop="6533429" score="8.45263" pvalue="4.82e-05">
+<sequence>CAGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="6533700" stop="6533709" score="7.21053" pvalue="8.1e-05">
+<sequence>CAGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="6585914" stop="6585905" score="11.2316" pvalue="1.43e-05">
+<sequence>CCGGATCCTA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="6586556" stop="6586565" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGTTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="6829454" stop="6829445" score="13.1053" pvalue="6.27e-06">
+<sequence>CCGGGTCGGA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="8850017" stop="8850026" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="8849766" stop="8849775" score="10.8842" pvalue="1.57e-05">
+<sequence>CCGGTTCAAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="8850017" stop="8850026" score="18.0632" pvalue="8.54e-07">
+<sequence>CCGGTTCCAG</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="12259361" stop="12259352" score="9" pvalue="3.64e-05">
+<sequence>CCGGGTCTGA</sequence>
+<mem:qvalue>0.434</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="12392704" stop="12392713" score="15.2842" pvalue="2.6e-06">
+<sequence>CCGGGTCCGA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="12392663" stop="12392654" score="13.1053" pvalue="6.27e-06">
+<sequence>CCGGGTCGGA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="12392697" stop="12392688" score="13.1053" pvalue="6.27e-06">
+<sequence>CCGGGTCGGA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="13101342" stop="13101351" score="8.50526" pvalue="4.42e-05">
+<sequence>CCGGTTGCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="13514831" stop="13514840" score="8.45263" pvalue="4.82e-05">
+<sequence>CCGTTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="13584831" stop="13584840" score="10.9895" pvalue="1.5e-05">
+<sequence>CCGGGTCGGG</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="15485849" stop="15485858" score="10.5684" pvalue="2.53e-05">
+<sequence>CCCGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="15485644" stop="15485635" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="16824820" stop="16824811" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="16824635" stop="16824626" score="11.5158" pvalue="1.24e-05">
+<sequence>CCGGATCCGA</sequence>
+<mem:qvalue>0.31</mem:qvalue>
+</matched-element>
+<matched-element start="16824926" stop="16824935" score="8.76842" pvalue="3.87e-05">
+<sequence>TCGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="17186003" stop="17185994" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="17189639" stop="17189630" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="23087314" stop="23087305" score="7.49474" pvalue="6.79e-05">
+<sequence>CCGATTCCGA</sequence>
+<mem:qvalue>0.51</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+<matched-element start="41076802" stop="41076811" score="8.74737" pvalue="4.21e-05">
+<sequence>CAGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="41076118" stop="41076127" score="6.62105" pvalue="8.76e-05">
+<sequence>CCGGGTTGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold6" name="Scaffold6">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="4729219" stop="4729228" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="6874110" stop="6874119" score="8.45263" pvalue="4.82e-05">
+<sequence>CCGATTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="8969849" stop="8969858" score="12.8105" pvalue="8.2e-06">
+<sequence>CCGGTTCGGG</sequence>
+<mem:qvalue>0.237</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="11006056" stop="11006065" score="7" pvalue="8.23e-05">
+<sequence>CCGGATACAG</sequence>
+<mem:qvalue>0.564</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12787392" stop="12787401" score="6.34737" pvalue="9.46e-05">
+<sequence>CCGGGTCCTC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12771064" stop="12771073" score="11.6316" pvalue="1.13e-05">
+<sequence>CCGGTTACGA</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12787392" stop="12787401" score="6.34737" pvalue="9.46e-05">
+<sequence>CCGGGTCCTC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12771064" stop="12771073" score="11.6316" pvalue="1.13e-05">
+<sequence>CCGGTTACGA</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12787392" stop="12787401" score="6.34737" pvalue="9.46e-05">
+<sequence>CCGGGTCCTC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="12771064" stop="12771073" score="11.6316" pvalue="1.13e-05">
+<sequence>CCGGTTACGA</sequence>
+<mem:qvalue>0.292</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="13423556" stop="13423547" score="8.38947" pvalue="5.71e-05">
+<sequence>CTGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="30213659" stop="30213650" score="11.0421" pvalue="1.49e-05">
+<sequence>CCGGGTCGCA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+<matched-element start="30212703" stop="30212712" score="6.56842" pvalue="9.33e-05">
+<sequence>CCGAGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="32511287" stop="32511278" score="8.74737" pvalue="4.21e-05">
+<sequence>CTGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="36099424" stop="36099433" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="41262359" stop="41262350" score="8.45263" pvalue="4.82e-05">
+<sequence>CTGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="42606475" stop="42606466" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="42749996" stop="42750005" score="8.38947" pvalue="5.71e-05">
+<sequence>CAGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold7" name="Scaffold7">
+<matched-element start="44274094" stop="44274103" score="8.38947" pvalue="5.71e-05">
+<sequence>CCAGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="1179774" stop="1179783" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="1178304" stop="1178295" score="6.56842" pvalue="9.33e-05">
+<sequence>CCAGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="2733493" stop="2733484" score="8.38947" pvalue="5.71e-05">
+<sequence>CCTGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="4608569" stop="4608560" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="4608339" stop="4608348" score="15.2842" pvalue="2.6e-06">
+<sequence>CCGGGTCCGA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="4608440" stop="4608449" score="12.4737" pvalue="9.73e-06">
+<sequence>CCGGATCCAG</sequence>
+<mem:qvalue>0.267</mem:qvalue>
+</matched-element>
+<matched-element start="4608443" stop="4608434" score="9.95789" pvalue="2.69e-05">
+<sequence>CCGGGTCTAG</sequence>
+<mem:qvalue>0.383</mem:qvalue>
+</matched-element>
+<matched-element start="4609598" stop="4609589" score="8.38947" pvalue="5.71e-05">
+<sequence>CGGGTTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+<matched-element start="4608673" stop="4608664" score="6.58947" pvalue="9.03e-05">
+<sequence>TCGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="7414877" stop="7414886" score="7.21053" pvalue="8.1e-05">
+<sequence>CCGCTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="28126237" stop="28126246" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="28126237" stop="28126246" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="28126237" stop="28126246" score="10.5684" pvalue="2.53e-05">
+<sequence>CCAGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="29627922" stop="29627913" score="10.8211" pvalue="1.61e-05">
+<sequence>CCGGTTCTGA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="34901019" stop="34901010" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="34902027" stop="34902018" score="8.45263" pvalue="4.82e-05">
+<sequence>CGGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="34919282" stop="34919291" score="6.29474" pvalue="9.66e-05">
+<sequence>TCGGTTCGAG</sequence>
+<mem:qvalue>0.582</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="38874112" stop="38874121" score="8.30526" pvalue="5.77e-05">
+<sequence>CCGGATCTAA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="40659230" stop="40659221" score="16.1789" pvalue="2.24e-06">
+<sequence>CCGGGTCGAA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="40659196" stop="40659187" score="9.33684" pvalue="3.2e-05">
+<sequence>CCGGATCGGA</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="40660160" stop="40660169" score="6.56842" pvalue="9.33e-05">
+<sequence>CTGGGTCGAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+<matched-element start="41688620" stop="41688629" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold8" name="Scaffold8">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="584285" stop="584276" score="10.5684" pvalue="2.53e-05">
+<sequence>CTGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="593083" stop="593074" score="10.5684" pvalue="2.53e-05">
+<sequence>CCGATTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="1434315" stop="1434324" score="15.2842" pvalue="2.6e-06">
+<sequence>CCGGGTCCGA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="1434423" stop="1434414" score="13.1053" pvalue="6.27e-06">
+<sequence>CCGGGTCGGA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="1434670" stop="1434661" score="7.74737" pvalue="6.08e-05">
+<sequence>CCGGGTACCA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="1434242" stop="1434233" score="7.4" pvalue="7.02e-05">
+<sequence>CCGGGCCCAG</sequence>
+<mem:qvalue>0.526</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="1427157" stop="1427148" score="18" pvalue="1.25e-06">
+<sequence>CCGGTTCGAA</sequence>
+<mem:qvalue>0.0969</mem:qvalue>
+</matched-element>
+<matched-element start="1428181" stop="1428172" score="15.0421" pvalue="2.83e-06">
+<sequence>CCGGTTCCCA</sequence>
+<mem:qvalue>0.122</mem:qvalue>
+</matched-element>
+<matched-element start="1428178" stop="1428187" score="12.9263" pvalue="6.41e-06">
+<sequence>CCGGTTCCCG</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="1428164" stop="1428155" score="10.5368" pvalue="2.6e-05">
+<sequence>CCGGTTCTTA</sequence>
+<mem:qvalue>0.381</mem:qvalue>
+</matched-element>
+<matched-element start="1427067" stop="1427076" score="9.34737" pvalue="3.18e-05">
+<sequence>CCGGTTCGAC</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="1427056" stop="1427047" score="8.70526" pvalue="4.28e-05">
+<sequence>CCGGTTCTGG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="1427144" stop="1427153" score="8.38947" pvalue="5.71e-05">
+<sequence>CCGATTCGAA</sequence>
+<mem:qvalue>0.471</mem:qvalue>
+</matched-element>
+<matched-element start="1427697" stop="1427706" score="7.52632" pvalue="6.42e-05">
+<sequence>CCGGGTCGAT</sequence>
+<mem:qvalue>0.486</mem:qvalue>
+</matched-element>
+<matched-element start="1427086" stop="1427077" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCC</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="4134657" stop="4134648" score="8.45263" pvalue="4.82e-05">
+<sequence>CGGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="6536144" stop="6536153" score="16.8211" pvalue="1.87e-06">
+<sequence>CCGGTTCCTA</sequence>
+<mem:qvalue>0.108</mem:qvalue>
+</matched-element>
+<matched-element start="6535642" stop="6535633" score="10.5895" pvalue="2.01e-05">
+<sequence>TCGGTTCCAA</sequence>
+<mem:qvalue>0.373</mem:qvalue>
+</matched-element>
+<matched-element start="6536494" stop="6536503" score="9.45263" pvalue="3.08e-05">
+<sequence>CCGGATCCCA</sequence>
+<mem:qvalue>0.401</mem:qvalue>
+</matched-element>
+<matched-element start="6535487" stop="6535496" score="8.8" pvalue="3.77e-05">
+<sequence>CCGGGTTCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="6535490" stop="6535481" score="8.76842" pvalue="3.87e-05">
+<sequence>CCGGTTCAAG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="6535769" stop="6535778" score="8.45263" pvalue="4.82e-05">
+<sequence>CGGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="6536496" stop="6536487" score="8.45263" pvalue="4.82e-05">
+<sequence>CGGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="6535741" stop="6535732" score="7.81053" pvalue="6.06e-05">
+<sequence>CCGGTTCAGA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="6536090" stop="6536081" score="7.68421" pvalue="6.19e-05">
+<sequence>ACGGTTCCGG</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+<matched-element start="6535713" stop="6535722" score="7.21053" pvalue="8.1e-05">
+<sequence>CGGGTTCCTA</sequence>
+<mem:qvalue>0.56</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="10623567" stop="10623576" score="8.47368" pvalue="4.48e-05">
+<sequence>GCGGTTCCAG</sequence>
+<mem:qvalue>0.447</mem:qvalue>
+</matched-element>
+<matched-element start="10624007" stop="10624016" score="6.38947" pvalue="9.42e-05">
+<sequence>CCGGTTCCCT</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="11968039" stop="11968048" score="8.87368" pvalue="3.71e-05">
+<sequence>ACGGGTCGAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="12618085" stop="12618094" score="7.26316" pvalue="7.46e-05">
+<sequence>CCGGTTTCTA</sequence>
+<mem:qvalue>0.546</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="28590496" stop="28590505" score="10.6211" pvalue="1.91e-05">
+<sequence>CCGGTTTCAA</sequence>
+<mem:qvalue>0.367</mem:qvalue>
+</matched-element>
+<matched-element start="28590518" stop="28590509" score="8.76842" pvalue="3.87e-05">
+<sequence>CCGGTTCAAG</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+<matched-element start="28590571" stop="28590580" score="8.41053" pvalue="5.19e-05">
+<sequence>GCGGTTCGAA</sequence>
+<mem:qvalue>0.462</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="29175536" stop="29175527" score="18.3579" pvalue="6.24e-07">
+<sequence>CCGGGTCCAA</sequence>
+<mem:qvalue>0.0875</mem:qvalue>
+</matched-element>
+<matched-element start="29176250" stop="29176241" score="6.58947" pvalue="9.03e-05">
+<sequence>ACGGTTCTAA</sequence>
+<mem:qvalue>0.573</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="29734705" stop="29734714" score="13.1053" pvalue="6.27e-06">
+<sequence>CCGGGTCGGA</sequence>
+<mem:qvalue>0.193</mem:qvalue>
+</matched-element>
+<matched-element start="29735789" stop="29735780" score="9.70526" pvalue="2.79e-05">
+<sequence>CCGGGTCCAT</sequence>
+<mem:qvalue>0.385</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="32425273" stop="32425282" score="7.74737" pvalue="6.08e-05">
+<sequence>CCGGGTACCA</sequence>
+<mem:qvalue>0.475</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="32411978" stop="32411987" score="10.8842" pvalue="1.57e-05">
+<sequence>CCGGTTCAAA</sequence>
+<mem:qvalue>0.327</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="36417281" stop="36417290" score="9.06316" pvalue="3.57e-05">
+<sequence>CCGGGTCAAA</sequence>
+<mem:qvalue>0.431</mem:qvalue>
+</matched-element>
+<matched-element start="36417274" stop="36417265" score="9" pvalue="3.64e-05">
+<sequence>CCGGGTCTGA</sequence>
+<mem:qvalue>0.434</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="38446986" stop="38446995" score="8.74737" pvalue="4.21e-05">
+<sequence>CAGGGTCCAA</sequence>
+<mem:qvalue>0.44</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Scaffold9" name="Scaffold9">
+<matched-element start="38443925" stop="38443916" score="7.26316" pvalue="7.46e-05">
+<sequence>CCGGTTTCTA</sequence>
+<mem:qvalue>0.546</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>

@@ -1,0 +1,19 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	3-CCGGTTCCAA	STREME-3	CCGGTTCCAA	39	7.65	34	1.89	4.03	15	2.67e-9	-19.74	3.74e-8	-17.10	3.74e-8	-17.10
+2	streme_out/streme.xml	1-AAAAATATCTCT	STREME-1	AAAAATATCTCT	120	23.53	230	12.78	1.85	11	7.13e-9	-18.76	9.98e-8	-16.12	4.99e-8	-16.81
+3	meme_out/meme.xml	CCCCCCCCCCCCCCC	MEME-6	CCCCCCCCCCCCCCC	224	43.92	713	39.61	1.11	8.5	4.49e-2	-3.10	6.29e-1	-0.46	2.10e-1	-1.56
+4	meme_out/meme.xml	AAAAARAAAAAAAAA	MEME-3	AAAAARAAAAAAAAA	51	10.00	142	7.89	1.28	17	7.82e-2	-2.55	1.09e0	0.09	2.13e-1	-1.55
+5	streme_out/streme.xml	5-AAGGCAATGCAAT	STREME-5	AAGGCAATGCAAT	104	20.39	316	17.56	1.17	7.7	8.16e-2	-2.51	1.14e0	0.13	2.13e-1	-1.55
+6	meme_out/meme.xml	TCTCTYTCTCTCTCY	MEME-2	TCTCTYTCTCTCTCY	392	76.86	1329	73.83	1.04	6.1	9.14e-2	-2.39	1.28e0	0.25	2.13e-1	-1.55
+7	meme_out/meme.xml	KTCGGGTAHGGGT	MEME-9	KTCGGGTAHGGGT	281	55.10	938	52.11	1.06	0.9	1.27e-1	-2.07	1.77e0	0.57	2.53e-1	-1.37
+8	meme_out/meme.xml	GACYCRAAYTYRACC	MEME-7	GACYCRAAYTYRACC	497	97.45	1737	96.50	1.01	0.3	1.79e-1	-1.72	2.51e0	0.92	3.10e-1	-1.17
+9	streme_out/streme.xml	2-AAAATATCTT	STREME-2	AAAATATCTT	4	0.78	7	0.39	2.2	16	2.10e-1	-1.56	2.93e0	1.08	3.10e-1	-1.17
+10	meme_out/meme.xml	TYTCTCTCTCYTCTY	MEME-4	TYTCTCTCTCYTCTY	65	12.75	205	11.39	1.13	19	2.21e-1	-1.51	3.10e0	1.13	3.10e-1	-1.17
+11	meme_out/meme.xml	GAGAGAGAGAGAGAG	MEME-1	GAGAGAGAGAGAGAG	342	67.06	1178	65.44	1.03	12	2.66e-1	-1.32	3.73e0	1.32	3.39e-1	-1.08
+12	meme_out/meme.xml	CTTYTTYTYTTTYTY	MEME-5	CTTYTTYTYTTTYTY	187	36.67	635	35.28	1.04	13	2.99e-1	-1.21	4.18e0	1.43	3.49e-1	-1.05
+13	streme_out/streme.xml	4-AAGATCAGCAAA	STREME-4	AAGATCAGCAAA	305	59.80	1066	59.22	1.01	3.4	4.27e-1	-0.85	5.98e0	1.79	4.60e-1	-0.78
+14	meme_out/meme.xml	CTCTCTCTCWYTCTC	MEME-8	CTCTCTCTCWYTCTC	399	78.24	1498	83.22	0.94	0.34	9.96e-1	-0.00	1.39e1	2.63	9.96e-1	-0.00
+
+# SEA (Simple Enrichment Analysis): Version 5.5.7 compiled on Aug 29 2024 at 17:50:21
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_disc_out --qvalue --thresh 1 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --noseqs --m meme_out/meme.xml --m streme_out/streme.xml --p postflowering_all_cNAD-MDH1-1_cluster.fa --n 2KB_UP_DOWN_random.fa

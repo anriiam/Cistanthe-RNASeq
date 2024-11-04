@@ -1,0 +1,28 @@
+RANK	SEED_MOTIF	CLUSTER	SOURCE	ID	ALT_ID	CONSENSUS	WIDTH	SITES	SEA_PVALUE	EVALUE	EVALUE_ACC	SIM_SOURCE	SIM_MOTIF	MOTIF_URL
+1	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1183.1	RVE6	AGATATTTTTD	11	174	2.56e-014	1.71e-011	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1183.1	http://jaspar2022.genereg.net/matrix/MA1183.1
+2	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1185.1	LHY	AGATATTTTN	10	168	1.53e-013	1.02e-010	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1185.1	http://jaspar2022.genereg.net/matrix/MA1185.1
+3	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1182.1	RVE8	AGATATTTTWDD	12	112	5.40e-013	3.62e-010	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1182.1	http://jaspar2022.genereg.net/matrix/MA1182.1
+4	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1190.1	RVE5	AGATATTTTTD	11	171	9.80e-013	6.57e-010	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1190.1	http://jaspar2022.genereg.net/matrix/MA1190.1
+5	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA0972.1	CCA1	AAATATCT	8	153	5.25e-012	3.52e-009	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA0972.1	http://jaspar2022.genereg.net/matrix/MA0972.1
+6	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1187.1	RVE4	AGATATTTTT	10	91	1.26e-011	8.45e-009	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1187.1	http://jaspar2022.genereg.net/matrix/MA1187.1
+7	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1191.1	RVE7L	HHHVAAAATATCTWA	15	129	6.34e-010	4.25e-007	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1191.1	http://jaspar2022.genereg.net/matrix/MA1191.1
+8	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1401.1	RVE7	RAAAATATCTWA	12	80	1.15e-009	7.69e-007	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1401.1	http://jaspar2022.genereg.net/matrix/MA1401.1
+9	1	1	STREME	3-CCGGTTCCAA	STREME-3	CCGGTTCCAA	10	28	2.67e-009	1.50e+000	1	STREME	3-CCGGTTCCAA	 
+10	0	2	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1184.1	RVE1	HHVWAAATATCTWH	14	143	3.51e-009	2.35e-006	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1184.1	http://jaspar2022.genereg.net/matrix/MA1184.1
+11	1	2	STREME	1-AAAAATATCTCT	STREME-1	AAAAATATCTCT	12	126	7.13e-009	2.98e-002	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1187.1 (RVE4)	http://jaspar2022.genereg.net/matrix/MA1187.1
+12	1	3	MEME	CCCCCCCCCCCCCCC	MEME-6	CCCCCCCCCCCCCCC	15	129	4.49e-002	1.70e-008	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1753.1 (ERF057)	http://jaspar2022.genereg.net/matrix/MA1753.1
+13	1	4	MEME	AAAAARAAAAAAAAA	MEME-3	AAAAARAAAAAAAAA	15	535	7.82e-002	4.30e-049	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1281.1 (DOF5.1)	http://jaspar2022.genereg.net/matrix/MA1281.1
+14	1	5	STREME	5-AAGGCAATGCAAT	STREME-5	AAGGCAATGCAAT	13	29	8.16e-002	5.00e+000	1	STREME	5-AAGGCAATGCAAT	 
+15	1	6	MEME	TCTCTYTCTCTCTCY	MEME-2	TCTCTYTCTCTCTCY	15	272	9.14e-002	1.20e-052	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1402.1 (BPC6)	http://jaspar2022.genereg.net/matrix/MA1402.1
+16	0	3	MEME	KTCGGGTAHGGGT	MEME-9	KTCGGGTAHGGGT	13	44	1.27e-001	9.60e-004	1	MEME	KTCGGGTAHGGGT	 
+17	1	7	MEME	GACYCRAAYTYRACC	MEME-7	GACYCRAAYTYRACC	15	166	1.79e-001	2.70e-008	1	MEME	GACYCRAAYTYRACC	 
+18	0	2	STREME	2-AAAATATCTT	STREME-2	AAAATATCTT	10	87	2.10e-001	1.23e-001	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1401.1 (RVE7)	http://jaspar2022.genereg.net/matrix/MA1401.1
+19	0	6	MEME	TYTCTCTCTCYTCTY	MEME-4	TYTCTCTCTCYTCTY	15	171	2.21e-001	2.30e-021	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1416.1 (RAMOSA1)	http://jaspar2022.genereg.net/matrix/MA1416.1
+20	0	3	MEME	GAGAGAGAGAGAGAG	MEME-1	GAGAGAGAGAGAGAG	15	563	2.66e-001	1.20e-075	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1404.1 (BPC1)	http://jaspar2022.genereg.net/matrix/MA1404.1
+21	0	4	MEME	CTTYTTYTYTTTYTY	MEME-5	CTTYTTYTYTTTYTY	15	566	2.99e-001	7.70e-011	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1274.1 (DOF3.6)	http://jaspar2022.genereg.net/matrix/MA1274.1
+22	1	8	STREME	4-AAGATCAGCAAA	STREME-4	AAGATCAGCAAA	12	25	4.27e-001	2.62e+000	1	STREME	4-AAGATCAGCAAA	 
+23	0	6	MEME	CTCTCTCTCWYTCTC	MEME-8	CTCTCTCTCWYTCTC	15	75	9.96e-001	1.00e-005	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1404.1 (BPC1)	http://jaspar2022.genereg.net/matrix/MA1404.1
+
+# XSTREME (Motif Discovery and Enrichment Analysis): Version 5.5.7 released on Wed Jun 19 13:59:04 2024 -0700
+# The format of this file is described at https://meme-suite.org/meme/doc/xstreme-output-format.html
+# xstreme --oc . --time 240 --streme-totallength 4000000 --meme-searchsize 100000 --dna --evt 0.05 --minw 6 --maxw 15 --align center --meme-mod zoops --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p postflowering_all_cNAD-MDH1-1_cluster.fa -n 2KB_UP_DOWN_random.fa
