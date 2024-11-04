@@ -1,0 +1,16 @@
+RANK	SEED_MOTIF	CLUSTER	SOURCE	ID	ALT_ID	CONSENSUS	WIDTH	SITES	SEA_PVALUE	EVALUE	EVALUE_ACC	SIM_SOURCE	SIM_MOTIF	MOTIF_URL
+1	1	1	STREME	2-AAGCTCCTGAAT	STREME-2	AAGCTCCTGAAT	12	21	4.42e-007	7.91e-001	1	STREME	2-AAGCTCCTGAAT	 
+2	1	2	MEME	TCGGDTCGGRTHCGG	MEME-8	TCGGDTCGGRTHCGG	15	87	2.33e-006	8.20e-003	1	MEME	TCGGDTCGGRTHCGG	 
+3	1	3	MEME	AAAAAAAAARAARAA	MEME-2	AAAAAAAAARAARAA	15	328	2.90e-006	1.20e-044	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1268.1 (CDF5)	http://jaspar2022.genereg.net/matrix/MA1268.1
+4	1	4	STREME	1-AGAACTTTTAWTA	STREME-1	AGAACTTTTAWTA	13	34	4.55e-004	7.91e-001	1	STREME	1-AGAACTTTTAWTA	 
+5	0	3	MEME	TTTTCTYTCYCYTCY	MEME-5	TTTTCTYTCYCYTCY	15	313	4.76e-004	9.40e-023	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1274.1 (DOF3.6)	http://jaspar2022.genereg.net/matrix/MA1274.1
+6	1	5	MEME	AGAGAGAGAGAGAGA	MEME-7	AGAGAGAGAGAGAGA	15	49	6.31e-003	2.60e-008	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1402.1 (BPC6)	http://jaspar2022.genereg.net/matrix/MA1402.1
+7	0	3	MEME	YTCTYTYTCTYTYTC	MEME-4	YTCTYTYTCTYTYTC	15	333	1.54e-002	1.60e-035	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1416.1 (RAMOSA1)	http://jaspar2022.genereg.net/matrix/MA1416.1
+8	0	3	MEME	TTTTDTTTTVTTTTT	MEME-6	TTTTDTTTTVTTTTT	15	335	3.29e-002	2.70e-010	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1268.1 (CDF5)	http://jaspar2022.genereg.net/matrix/MA1268.1
+9	1	6	MEME	GGKGGRGDRGGGRGR	MEME-3	GGKGGRGDRGGGRGR	15	335	3.67e-002	7.00e-046	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1250.1 (DREB2D)	http://jaspar2022.genereg.net/matrix/MA1250.1
+10	0	3	STREME	3-AGAAAGAAGAGAAM	STREME-3	AGAAAGAAGAGAAM	14	16	3.41e-001	3.00e+000	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1823.1 (Zm00001d027846)	http://jaspar2022.genereg.net/matrix/MA1823.1
+11	0	5	MEME	CTCTCTCTCTCTCTC	MEME-1	CTCTCTCTCTCTCTC	15	215	5.47e-001	3.50e-086	1	db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme	MA1404.1 (BPC1)	http://jaspar2022.genereg.net/matrix/MA1404.1
+
+# XSTREME (Motif Discovery and Enrichment Analysis): Version 5.5.7 released on Wed Jun 19 13:59:04 2024 -0700
+# The format of this file is described at https://meme-suite.org/meme/doc/xstreme-output-format.html
+# xstreme --oc . --time 240 --streme-totallength 4000000 --meme-searchsize 100000 --dna --evt 0.05 --minw 6 --maxw 15 --align center --meme-mod zoops --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p postflowering_all_cpNADP-ME4-1_cluster.fa -n 2KB_UP_DOWN_random.fa

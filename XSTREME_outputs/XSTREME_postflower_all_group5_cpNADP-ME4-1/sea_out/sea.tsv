@@ -1,0 +1,8 @@
+RANK	DB	ID	ALT_ID	CONSENSUS	TP	TP%	FP	FP%	ENR_RATIO	SCORE_THR	PVALUE	LOG_PVALUE	EVALUE	LOG_EVALUE	QVALUE	LOG_QVALUE
+1	streme_out/streme.xml	2-AAGCTCCTGAAT	STREME-2	AAGCTCCTGAAT	28	9.24	47	2.61	3.58	13	4.42e-7	-14.63	2.95e-4	-8.13	2.78e-4	-8.19
+2	meme_out/meme.xml	TCGGDTCGGRTHCGG	MEME-8	TCGGDTCGGRTHCGG	56	18.48	162	9.00	2.07	16	2.33e-6	-12.97	1.56e-3	-6.47	6.06e-4	-7.41
+3	meme_out/meme.xml	AAAAAAAAARAARAA	MEME-2	AAAAAAAAARAARAA	198	65.35	922	51.22	1.28	13	2.90e-6	-12.75	1.93e-3	-6.25	6.06e-4	-7.41
+
+# SEA (Simple Enrichment Analysis): Version 5.5.7 compiled on Aug 29 2024 at 17:50:21
+# The format of this file is described at https://meme-suite.org/meme/doc/sea-output-format.html.
+# sea --verbosity 1 --oc sea_out --thresh 0.05 --order 2 --bfile ./background --seed 0 --align center --motif-pseudo 0.01 --m meme_out/meme.xml --m streme_out/streme.xml --m db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme --p postflowering_all_cpNADP-ME4-1_cluster.fa --n 2KB_UP_DOWN_random.fa

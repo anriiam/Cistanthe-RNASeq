@@ -1,0 +1,7 @@
+Query_ID	Target_ID	Optimal_offset	p-value	E-value	q-value	Overlap	Query_consensus	Target_consensus	Orientation
+3-AGAAAGAAGAGAAM	MA1823.1	0	0.000656101	0.430402	0.564483	12	AGAAAGAAGAGAAA	AAAAAGAAAAAA	+
+3-AGAAAGAAGAGAAM	MA1159.1	-1	0.00109687	0.719544	0.564483	13	AGAAAGAAGAGAAA	AAAAAAAGACAAAAA	+
+
+# Tomtom (Motif Comparison Tool): Version 5.5.7 compiled on Aug 29 2024 at 17:50:26
+# The format of this file is described at https://meme-suite.org/meme/doc/tomtom-output-format.html.
+# tomtom -verbosity 1 -oc streme_tomtom_out -min-overlap 5 -dist ed -evalue -thresh 1 -no-ssc streme_out/streme.xml db/motif_databases/JASPAR/JASPAR2022_CORE_plants_non-redundant_v2.meme
