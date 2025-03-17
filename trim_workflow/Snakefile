@@ -1,0 +1,45 @@
+"""
+Snakemake mapping workflow
+Modified from https://snakemake.readthedocs.io/en/stable/tutorial/advanced.html
+"""
+
+import sys
+configfile: "config.yaml"
+scratchdir = config["scratchdir"]
+
+wildcard_constraints:
+    sample="[A-Za-z0-9]+"
+
+# state the output you want
+rule all:
+    input:
+        expand(scratchdir + "trimmed_reads/{sample}_R1_trimmed.fastq.gz", sample=config["sample"]),
+        expand(scratchdir + "trimmed_reads/{sample}_R2_trimmed.fastq.gz", sample=config["sample"])
+
+# run trimmomatic
+
+rule trimmomatic_pe:
+    priority: 1
+    input:
+        READ1 = lambda wildcards: config["sample"][wildcards.sample]["reads"][0],
+        READ2 = lambda wildcards: config["sample"][wildcards.sample]["reads"][1]
+    output:
+        TRIM1P = scratchdir + "trimmed_reads/{sample}_R1_trimmed.fastq.gz",
+        TRIM1U = temp( scratchdir + "trimmed_reads/{sample}.R1.unpaired.trimmed.fastq.gz" ),
+        TRIM2P = scratchdir + "trimmed_reads/{sample}_R2_trimmed.fastq.gz",
+        TRIM2U = temp( scratchdir + "trimmed_reads/{sample}.R2.unpaired_trimmed.fastq.gz" )
+    log:
+        "logs/trimmomatic/{sample}.log"
+    threads: workflow.cores - 2
+    shell:
+        """
+        echo ">PrefixPE/1\nTACACTCTTTCCCTACACGACGCTCTTCCGATCT\n>PrefixPE/2\nGTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT" > TruSeq3-PE.fa
+        java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.39.jar PE -threads $SLURM_CPUS_PER_TASK \
+        {input.READ1} \
+        {input.READ2} \
+        {output.TRIM1P} \
+        {output.TRIM1U} \
+        {output.TRIM2P} \
+        {output.TRIM2U} \
+        ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36 2> {log}
+        """
