@@ -1,0 +1,11 @@
+# where you want results to go
+scratchdir: "/vast/palmer/scratch/edwards/ac2767/rnaseq/"
+
+# list of samples, with an ID, and then a list of two read files for each
+# you can add more samples here; just add unique sample name "sample_name:" and "reads:" in two new lines before adding path to new samples
+# do NOT change anything about the indentation or general format, or else Snakemake will freak out
+sample:
+  S4B6PM:
+    reads:
+    - /vast/palmer/scratch/edwards/ac2767/rnaseq/merged_reads/Sample_S4B6PM/S4B6PM_R1.fastq.gz
+    - /vast/palmer/scratch/edwards/ac2767/rnaseq/merged_reads/Sample_S4B6PM/S4B6PM_R2.fastq.gz
