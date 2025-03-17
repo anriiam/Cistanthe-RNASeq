@@ -1,5 +1,5 @@
 #!/bin/bash
-## Cistanthe longiscapa RNA seq project
+## Cistanthe RNA seq project
 
 ###### Download illumina data with sbatch slurm_getdata_rnaseq.sh
 ```bash
@@ -75,7 +75,9 @@ multiqc .
 
 ```
 
-### Now, run trim samples with Trimmomatic with Snakemake
+### Now, trim samples with Trimmomatic using Snakemake
+#No need to use Snakemake, but just wanted to learn how to use it
+#Snakefile (Snakefile_rnaseq_trim) and config file uploaded in trim_workflow
 srun --pty -t 30:00 -p devel bash
 
 module load miniconda
@@ -115,11 +117,12 @@ conda activate snakemake_env
 snakemake --scheduler greedy --verbose --rerun-incomplete --cores $SLURM_CPUS_PER_TASK --latency-wait 90
 ```
 
-### Run FastQC again for trimmed reads in ./trimmed_reads/*.fastq.gz, and multiqc again
+# Run FastQC again for trimmed reads in ./trimmed_reads/*.fastq.gz, and multiqc again
 
 
 ###### Run STAR
 # Make sure we have our genome (cislon_corrected.fasta) and annotation (cislon_genes.gff3) files
+# Uploaded in github.com/anriiam/Cistanthe-cachinalensis-genome
 
 ### Convert our gff3 file to gtf
 ssh ac2767@mccleary.ycrc.yale.edu
