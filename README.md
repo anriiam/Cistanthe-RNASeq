@@ -5,15 +5,18 @@ Data, scripts, and outputs from Chomentowska et al (in press): "High-quality gen
 Raw RNA sequencing data will be available at NCBI under BioProject PRJNA1181828.
 
 
-### Directory
-Script to process RNA Seq: Cistanthe_RNAseq_analysis.sh
+### In this repository, you will find:
 
-Snakemake pipeline ofr trimming and QC: trim_workflow/
+- Pipeline to process RNASeq reads: Cistanthe_RNAseq_analysis.sh
 
-Files for RNASeq Metadata, raw and normalized counts, photosynthetic orthologs; R scripts for differential gene expression analyses + TPM calculations: DGE_analysis/
+- RNASeq Metadata: RNA_metadata.xlsx
 
-Data and R script for visualizing gas exchange: gas_exchange_measurements/
+- Snakemake files for trimming and QC to work within the above pipeline: trim_workflow/
 
-Data and R script for visualizing titratable acidity: titratable_acidity/
+- Raw and normalized gene counts, list of photosynthetic orthologs, and R scripts for differential gene expression analyses + TPM calculations: DGE_analysis/
 
-Output from XSTREME analyses (https://meme-suite.org/meme/doc/xstreme.html?man_type=web): XSTREME_outputs/
+- Data and R script for visualizing gas exchange: gas_exchange_measurements/
+
+- Data and R script for visualizing titratable acidity: titratable_acidity/
+
+- Output from XSTREME analyses (https://meme-suite.org/meme/doc/xstreme.html?man_type=web): XSTREME_outputs/
