@@ -13,4 +13,4 @@ R scripts for differential gene expression analyses and TPM calculations:
 
 Data and R script for visualizing gas exchange:
 
-Dta and R script for visualizing titratable acidity:
+Dta and R script for visualizing titratable acidity: /titratable_acidity
