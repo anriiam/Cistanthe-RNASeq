@@ -1,5 +1,6 @@
 #!/bin/bash
 ## Cistanthe RNA seq project
+## Anri Chomentowska
 
 ###### Download illumina data with sbatch slurm_getdata_rnaseq.sh
 ```bash
