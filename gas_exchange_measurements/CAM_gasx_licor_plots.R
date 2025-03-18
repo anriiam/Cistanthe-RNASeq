@@ -1,4 +1,6 @@
 ###LICOR plots##################################################################
+###Anri Chomentowska: last edited Dec 2024
+
 rm(list = ls()) # clear environment
 setwd("~/Dropbox/Yale/Research/CAM/Licor") # set your 
 library(tidyverse)
@@ -7,7 +9,6 @@ library(ggsignif)
 library(ggpubr)
 library(ggtext)
 library(RColorBrewer)
-set.seed(11)
 
 ### reads data
 licor <- read.csv("Spotcheck_cropped_adjusted.csv")
