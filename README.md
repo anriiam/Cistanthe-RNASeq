@@ -1,11 +1,11 @@
 # Cistanthe-RNASeq
 
-## Data, scripts, and outputs from Chomentowska et al (in press): "High-quality genome of the Atacama Desert plant Cistanthe cachinalensis and its photosynthetic behavior related to drought and life history."
+Data, scripts, and outputs from Chomentowska et al (in press): "High-quality genome of the Atacama Desert plant Cistanthe cachinalensis and its photosynthetic behavior related to drought and life history."
 
 Raw RNA sequencing data will be available at NCBI under BioProject PRJNA1181828.
 
 
-## Directory
+### Directory
 Script to process RNA Seq: Cistanthe_RNAseq_analysis.sh
 
 Snakemake pipeline ofr trimming and QC: trim_workflow/
